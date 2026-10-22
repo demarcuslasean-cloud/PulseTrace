@@ -22,6 +22,11 @@ public class Main {
 
             for (Track track : tracks) {
                 System.out.println(track);
+                int numOfEvents = track.size();
+                for (int i = 0; i < numOfEvents; i++) {
+                    MidiEvent event = track.get(i);
+                    System.out.println("Event " + i + " - Tick: " + event.getTick());
+                }
             }
 
             for (Track track : tracks) {
